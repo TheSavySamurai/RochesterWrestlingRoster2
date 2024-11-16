@@ -1,0 +1,82 @@
+* {
+  box-sizing: border-box;
+}
+body,
+html {
+  height: 100%;
+  margin: 0;
+  align-items: center;
+}
+.flexContainer {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10%;
+}
+.Container {
+  background: #2900e0;
+  display: flex;
+  border: #000 solid;
+  width: 80%;
+  height: 50vh;
+}
+.signUpContainer {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  float: left;
+  background: #cacaca;
+  width: 50%;
+  border-radius: 10vh 0px 0px 10vh;
+  transition: 0.3s;
+}
+h1 {
+  text-align: center;
+}
+.signUpContainer.open {
+  border-radius: 0px;
+}
+.loginContainer {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  color: #fff;
+  float: left;
+  background: #2900e0;
+  width: 50%;
+  border-radius: 0px 10vh 10vh 0px;
+  transition: 0.3s;
+}
+.loginContainer.open {
+  border-radius: 0px;
+}
+.loginContainer.open .container {
+  background: #cacaca;
+}
+button {
+  border-radius: 5vh;
+  border: none;
+  width: 40%;
+  height: 30%;
+  margin-top: 5%;
+  margin-left: 25%;
+}
+input {
+  background: #1a018b;
+  border-radius: 5vh;
+  border: 0px;
+  width: 80%;
+  height: 25%;
+  color: #fff;
+}
+.loginForm {
+  margin-left: 5%;
+}
+.Sign-UpForm {
+  margin-left: 5%;
+}
+#loginSpan {
+  font-size: 4vh;
+}
