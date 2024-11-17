@@ -1,5 +1,5 @@
 import { initializeApp } from "https://www.gstatic.com/firebasejs/11.0.2/firebase-app.js";
-import { getAuth, createUserWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/11.0.2/firebase-auth.js"; // Updated version
+import { getAuth, signInWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/11.0.2/firebase-auth.js"; // Updated version
 
 const firebaseConfig = {
   apiKey: "AIzaSyBm7P0lDEKPnEJhBk4YsCGg_zy6uYnWhyA",
@@ -15,14 +15,14 @@ const firebaseConfig = {
 const app = initializeApp(firebaseConfig);
 const auth = getAuth(app);
 
-const submit = document.getElementById('submitSignup');
+const submit = document.getElementById('submitLogin');
 submit.addEventListener("click", function(event){
   event.preventDefault();
 
-  const email = document.getElementById("signUpEmail").value;
-  const password = document.getElementById("signupPword").value;
+  const email = document.getElementById("email").value;
+  const password = document.getElementById("pword").value;
 
-  createUserWithEmailAndPassword(auth, email, password)
+  signInWithEmailAndPassword(auth, email, password)
   .then((userCredential) => {
     const user = userCredential.user;
     window.location.href="home.html";

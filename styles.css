@@ -1,62 +1,119 @@
+/* Global Styles */
 * {
   box-sizing: border-box;
+  font-family: 'Poppins'; /* Added a fallback font */
 }
+
 body {
-  font-family: "poppins";
+  margin: 0; /* Reset default margin */
 }
+
+/* Header Styles */
 .header {
   padding: 1em;
   width: 100%;
   background: #2900e0;
-  color: #ffff;
+  color: #ffffff; /* Use hex code for white */
   text-align: center;
 }
+
+/* Navigation Bar Styles */
 #navBar {
   padding: 1em;
   background: #1c028d;
 }
+
 .navBar {
-  overflow: hidden;
-  color: #ffff;
   display: flex;
   justify-content: space-evenly;
+  color: #ffffff;
+  overflow: hidden;
 }
+
 .navBar a {
-  white-space: no-wrap;
-  color: #fff;
+  display: inline-block; /* Ensures proper spacing */
+  color: #ffffff;
   text-decoration: none;
   font-size: 1em;
   background: #2900e0;
   border-radius: 10%;
   padding: 1em;
-  transition: 0.3s;
+  transition:transform 0.3s; /* Separate transitions for clarity */
 }
+
 .navBar a:hover {
   background: #0e0146;
-  scale: 1.2;
+  transform: scale(1.2); /* Changed from 'scale' to 'transform: scale' for clarity */
 }
-.content {
+
+/* Flexbox Layout Styles */
+.FlexContainer {
+  display:flex;
+  flex-direction: column;
+  background: #2900e0;
+  border:#0e0146 solid;
+  width:100%;
+  margin-top: 5%;
+  gap: 5%; /* This adds space between columns */
 }
+
 .column {
+  display: flex;
+  flex-direction: column; /* Ensures proper stacking */
   margin-top: 1%;
+  float:left;
+  flex:40%; /* Allow columns to grow and shrink, taking up 40% of the container */
+  max-width: 50%; /* Ensure max width for two columns */
   height: auto;
-  border: #1c028d solid;
-  float: left;
-  width: 33%;
-  padding: 10em;
+  justify-content: center;
 }
-.column.middle {
-  width: 25%;
+
+.wrestlerBox {
+  display:flex;
+  flex:auto;
+  margin-top: 10%;
+  border: 0.5vh solid #0e0146;
+  width: 90%;
+  height: 80%; /* Ensure this is defined */
+  overflow: hidden; /* This will help hide overflow */
+  position: relative; /* Add this if positioning is needed */
+  display: flex; /* Enable flexbox */
+  flex-direction: column; /* Stack children vertically */
+  justify-content: space-between; /* Space between children */
 }
-.column.side {
-  width: 25%;
+.wrestlerPicture {
+    display:flex;
+    width: 100%; /* Ensure full width */
+    height: auto; /* Set height to auto to maintain aspect ratio */
+    border-bottom:#0e0146 0.5vh solid;
 }
-.gridContainer {
-  display: grid;
+.wrestlerPicture img{
+  width:95%;
+  object-fit:contain;
+  flex:auto;
 }
-@media screen and(max-width:800px) {
-  .side,
-  .middle {
-    width: 100%;
+
+.wrestlerButton {
+  border: #0e0146 0.1em solid;
+  height:auto;
+  width:100%;
+  padding-top:5%;
+  padding-bottom:5%;
+  text-align:center;
+  font-size:100%;
+  align-self: flex-end; /* Aligns the button to the right */
+  margin-top: auto; /* Pushes the button to the bottom of the wrestler box */
+}
+/* Responsive Styles */
+@media screen and (max-width: 800px) {
+  .FlexContainer {
+    flex-direction: column; /* Change the flex direction to column */
+  }
+
+  .column {
+    width: 100%; /* Ensure each column takes full width */
+    flex: none; /* Prevent flex-grow/shrink */
+    max-width: none; /* Remove max-width restriction */
+    margin-top: 0; /* Optional: Reset margin for better spacing */
   }
 }

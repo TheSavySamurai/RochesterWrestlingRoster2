@@ -5,38 +5,55 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Rochester Wrestling Log in</title>
     <link rel="stylesheet" href="login.css"></link>
+    <script type="module" src="register.js" defer></script>
+    <script type="module"src="login.js" defer></script>
+    <link
+      href="https://fonts.googleapis.com/css?family=Poppins"
+      rel="stylesheet"
+    />
   </head>
   <body>
     
     <main>
       <div class="flexContainer">
-        <div class="Container">
-          <div class="loginContainer">
+        <div class="Container"id="loginSignupContainer">
+          <div class="loginContainer open"id="loginContainer">
+            <div class="loginOpen">
             <h1 id="loginSpan">Login</h1>
             <form action="#"class="loginForm">
               <label for="email">Email:<br>
               <input type="email"id=email name="email"placeholder="Enter your email"><br>
               <label for="pword">Password:<br>
               <input type="password"id=pword name="password"placeholder="Enter your password"><br>
-              <button type="submit">Submit</button>
+              <button type="submit"id="submitLogin">Submit</button>
             </form>
+            </div>
+            <div class="loginClosed">
+              <h1>Hi New User!</h1>
+              <span>Already have an account</span><br>
+              <button id="loginSwitch">Log-in</button>
+            </div>
           </div>
-          <div class="signUpContainer">
-            <div class="openSignup">
+          <div class="signUpContainer"id="signupContainer">
+            <div class="signupOpen">
             <h1 id="Sign-UpH1">Sign-Up</h1>
             <form action="#"class="Sign-UpForm">
               <label for="email">Email:<br>
-              <input type="email"id=email name="email"placeholder="Enter your email"><br>
+              <input type="email"id=signUpEmail name="email"placeholder="Enter your email"><br>
               <label for="pword">Password:<br>
-              <input type="password"id=pword name="password"placeholder="Enter your password"><br>
-              <button type="submit">Submit</button>
+              <input type="password"id=signupPword name="password"placeholder="Enter your password"><br>
+              <button type="submit"id="submitSignup">Submit</button>
             </form>
+            </div>
+          <div class="signupClosed">
+            <h1>Welcome Back</h1>
+            <span>New User?</span><br>
+            <button id="signupSwitch">Create an account</button>
           </div>
-          <div class="closedSignup"></div>
           </div>
         </div>
       </div>
     </main>
-    <div class="bg"></div>
+    <script src="loginForm.js"></script>
   </body>
 </html>

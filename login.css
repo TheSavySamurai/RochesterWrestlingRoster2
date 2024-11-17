@@ -1,5 +1,6 @@
 * {
   box-sizing: border-box;
+  font-family:poppins;
 }
 body,
 html {
@@ -16,7 +17,7 @@ html {
   margin-top: 10%;
 }
 .Container {
-  background: #2900e0;
+  background: #cacaca;
   display: flex;
   border: #000 solid;
   width: 80%;
@@ -26,19 +27,35 @@ html {
   display: flex;
   flex-direction: column;
   overflow: hidden;
+  color: #000;
   float: left;
   background: #cacaca;
   width: 50%;
-  border-radius: 10vh 0px 0px 10vh;
+  border-radius: 0px;
   transition: 0.3s;
 }
-h1 {
-  text-align: center;
-}
 .signUpContainer.open {
-  border-radius: 0px;
+  border-radius:10vh 0px 0px 10vh;
 }
-.loginContainer {
+.signUpContainer.open .signupOpen{
+  visibility: visible;
+}
+.signUpContainer.open .signupClosed{
+  visibility:hidden;
+}
+.signupOpen{
+  visibility: hidden;
+}
+.signupClosed{
+  position:absolute;
+  top:25%;
+  align-self: center;
+  text-align:center;
+}
+.signupClosed button{
+  margin-left:0%;
+}
+.loginContainer{
   display: flex;
   flex-direction: column;
   overflow: hidden;
@@ -46,14 +63,38 @@ h1 {
   float: left;
   background: #2900e0;
   width: 50%;
-  border-radius: 0px 10vh 10vh 0px;
+  border-radius: 0px;
   transition: 0.3s;
 }
 .loginContainer.open {
   border-radius: 0px;
+  border-radius: 0px 10vh 10vh 0px;
 }
 .loginContainer.open .container {
   background: #cacaca;
+}
+.loginContainer.open .loginOpen{
+  visibility: visible;
+}
+.loginContainer.open .loginClosed{
+  visibility:hidden;
+}
+.loginOpen{
+  visibility: hidden;
+}
+.loginClosed{
+  position:absolute;
+  top:25%;
+  align-self: center;
+  text-align:center;
+}
+h1 {
+  text-align: center;
+  font-size:2vh;
+}
+span{
+  font-size:2vh;
+  overflow-wrap:anywhere;
 }
 button {
   border-radius: 5vh;
@@ -62,10 +103,15 @@ button {
   height: 30%;
   margin-top: 5%;
   margin-left: 25%;
+  white-space: no-wrap;
+}
+label{
+  font-size:2vh;
 }
 input {
   background: #1a018b;
   border-radius: 5vh;
+  font-size:2vh;
   border: 0px;
   width: 80%;
   height: 25%;
@@ -76,7 +122,4 @@ input {
 }
 .Sign-UpForm {
   margin-left: 5%;
-}
-#loginSpan {
-  font-size: 4vh;
 }
