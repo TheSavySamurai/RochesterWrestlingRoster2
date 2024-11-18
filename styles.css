@@ -45,14 +45,20 @@ body {
   background: #0e0146;
   transform: scale(1.2); /* Changed from 'scale' to 'transform: scale' for clarity */
 }
-
+main{
+  justify-self:center;
+}
 /* Flexbox Layout Styles */
 .FlexContainer {
   display:flex;
   flex-direction: column;
   background: #2900e0;
   border:#0e0146 solid;
-  width:100%;
+  width:100vw;
+  height:100vh;
+  justify-content: space-evenly;
+  align-items: center;
+  float:left;
   margin-top: 5%;
   gap: 5%; /* This adds space between columns */
 }
@@ -65,7 +71,7 @@ body {
   flex:40%; /* Allow columns to grow and shrink, taking up 40% of the container */
   max-width: 50%; /* Ensure max width for two columns */
   height: auto;
-  justify-content: center;
+  justify-content:space-evenly;
 }
 
 .wrestlerBox {
@@ -92,7 +98,6 @@ body {
   object-fit:contain;
   flex:auto;
 }
-
 .wrestlerButton {
   border: #0e0146 0.1em solid;
   height:auto;
@@ -109,8 +114,11 @@ body {
   .FlexContainer {
     flex-direction: column; /* Change the flex direction to column */
   }
-
   .column {
+    justify-self:center;
+    float:none;
+    flex: 100%; /* Make the columns take up 100% of the container */
+    max-width: 100%; /* Ensure max width for one column */
     width: 100%; /* Ensure each column takes full width */
     flex: none; /* Prevent flex-grow/shrink */
     max-width: none; /* Remove max-width restriction */
