@@ -148,6 +148,11 @@ input {
   color: #fff;
 }
 @media screen and (max-width: 800px){
+  .flexContainer{
+    display:flex;
+    flex-direction: column;
+
+  }
   body{
     overflow-y:hidden;
   }
@@ -168,11 +173,10 @@ input {
     border-radius:0px 0px 10vh 10vh ;
   }
   .title{
-    font-size:auto;
-    position:absolute;
+    display:flex;
+    font-size:3vh;
     top:0;
     width:100vw;
     height:10vh;
-    margin-bottom: 5%;
   }
 }
