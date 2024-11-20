@@ -146,21 +146,28 @@ input {
   width: 80%;
   height: 25%;
   color: #fff;
+}.responsive-image{
+  width:0%;
+  content:none;
 }
 @media screen and (max-width: 800px){
   .flexContainer{
-    margin:0;
-    position:relative;
+    position:fixed;
     top:0px;
-    display:flex;
+    width: 100%;
+    height: auto; /* Change from 100% to auto if necessary */
+    display: flex;
+    justify-content: center;
+    align-items: center;
     flex-direction: column;
-
   }
   body{
     overflow-y:hidden;
   }
   .Container{
-    height:90vh;
+    position:relative;
+    bottom:0px;
+    height:80vh;
     width:100vw;
     display:flex;
     flex-direction: column;
@@ -169,19 +176,32 @@ input {
     width:100%;
     height:40vh;
   }
-  .signUpContainer.open {
+  .signUpContainer.open{
     border-radius:10vh 10vh 0px 0px;
   }
   .loginContainer.open {
     border-radius:0px 0px 10vh 10vh ;
   }
   .title{
+    height:4vh;
+    width:100%;
     position:relative;
     top:0px;
-    display:flex;
-    font-size:3vh;
-    top:0;
-    width:100vw;
-    height:10vh;
+    text-align: center;
+    text-decoration: underline;
+    padding: 0.5vw;
+    font-size: 120%;
+    border-radius: 1vw;
+    background-color: #cacaca;
+    top:0px;
+  }
+  
+  .responsive-image{
+    background:#2900e0;
+    align-self:center;
+    width:30%;
+    height:auto;
+    margin:10px 0;
+    object-fit: scale-down;
   }
 }
