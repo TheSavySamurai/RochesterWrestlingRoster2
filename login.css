@@ -168,7 +168,11 @@ input {
     border-radius:0px 0px 10vh 10vh ;
   }
   .title{
+    font-size:auto;
+    position:absolute;
+    top:0;
     width:100vw;
     height:10vh;
+    margin-bottom: 5%;
   }
 }
