@@ -149,6 +149,9 @@ input {
 }
 @media screen and (max-width: 800px){
   .flexContainer{
+    margin:0;
+    position:relative;
+    top:0px;
     display:flex;
     flex-direction: column;
 
@@ -164,7 +167,7 @@ input {
   }
   .signUpContainer, .loginContainer{
     width:100%;
-    height:50%;
+    height:40vh;
   }
   .signUpContainer.open {
     border-radius:10vh 10vh 0px 0px;
@@ -173,6 +176,8 @@ input {
     border-radius:0px 0px 10vh 10vh ;
   }
   .title{
+    position:relative;
+    top:0px;
     display:flex;
     font-size:3vh;
     top:0;
