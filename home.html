@@ -10,6 +10,48 @@
       href="https://fonts.googleapis.com/css?family=Poppins"
       rel="stylesheet"
     />
+    <style>
+      *{
+        box-sizing: border-box;
+      }
+      .title{
+        font-size:200%;
+        font-weight: bold;
+      }
+      .subtitle{
+        font-size:150%;
+        font-weight: bold;
+      }
+      .caption{
+        font-size:125%;
+        font-weight: bold;
+      }
+      section{
+        display:flex;
+        flex-direction: column;
+        align-items: center;
+      }
+      .informationArea{
+        display:grid;
+        flex-direction: column;
+        align-items: center;
+        justify-content:space-evenly;
+        column-count: 3;
+        column-gap:10%;
+        column-width:30%;
+      }
+      
+      .coaches,.headCoach{
+        float:left;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        float:center;
+        background:#621fff;
+        padding: 10px; 
+        margin:0 0 1em 0;
+      }
+    </style>
   </head>
   <body>
     <div class="header">
@@ -26,7 +68,23 @@
         </div>
       </nav>
       <main>
-        <div></div>
+        <section>
+          <img src="rochesterFalcon.jpg"><br>
+          <span class="title">About the Team</span>
+          <div class="informationArea">
+            <div class="headCoach">
+              <span class="subtitle">Coaches</span><br>
+              <span class="caption">Head Coach</span><br>
+              <span class="caption">Coach Vernon</span>
+            </div>
+            <div class="coaches">
+              <span class="subtitle">Assistant Coaches</span><br>
+              <span class="caption">Coach Troy</span><br>
+              <span class="caption">Coach Cody</span><br>
+              <span class="caption">Coach Jordan</span><br>
+            </div>
+          </div>
+        </section>
       </main>
     </div>
   </body>
