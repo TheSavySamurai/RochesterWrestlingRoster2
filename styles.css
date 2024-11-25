@@ -56,7 +56,7 @@ main{
   border:#0e0146 solid;
   width:100vw;
   height:100vh;
-  justify-content: space-evenly;
+  justify-content: center;
   align-items: center;
   float:left;
   margin-top: 5%;

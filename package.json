@@ -1,13 +1,13 @@
 {
-  "name": "html-css",
+  "name": "Rochester Wrestling Roster",
   "version": "1.0.0",
-  "description": "A template for HTML and CSS",
+  "description": "Wrestling Roster for Rochester High",
   "main": "index.html",
   "scripts": {
     "start": "serve"
   },
   "keywords": ["html", "css"],
-  "author": "Ives van Hoorne",
+  "author": "Dillon DeWitt",
   "license": "MIT",
   "devDependencies": {
     "serve": "11.2.0"
