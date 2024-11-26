@@ -132,7 +132,7 @@ main{
     padding:0px;
   }
   .wrestlerBox{
-    width:45vw;
+    width:100%;
     height:fit-content;
   }
 }
