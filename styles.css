@@ -120,9 +120,6 @@ main{
 }
 /* Responsive Styles */
 @media screen and (max-width: 800px) {
-  .FlexContainer {
-    flex-direction: column; /* Change the flex direction to column */
-  }
   .column {
     justify-self:center;
     float:none;
