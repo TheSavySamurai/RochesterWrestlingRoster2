@@ -125,7 +125,7 @@ main{
     float:none;
     flex: 100%; /* Make the columns take up 100% of the container */
     max-width: 100%; /* Ensure max width for one column */
-    width: 100%; /* Ensure each column takes full width */
+    width: 100vw; /* Ensure each column takes full width */
     flex: none; /* Prevent flex-grow/shrink */
     max-width: none; /* Remove max-width restriction */
     margin-top: 0; /* Optional: Reset margin for better spacing */
