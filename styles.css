@@ -55,15 +55,14 @@ main{
   background: #2900e0;
   border:#0e0146 solid;
   width:100vw;
-  height:100vh;
+  height:fit-content;
   justify-content: center;
   align-items: center;
-  float:left;
   margin-top: 5%;
-  gap: 5%; /* This adds space between columns */
 }
 
 .column {
+  padding:5vw;
   display: flex;
   flex-direction: column; /* Ensures proper stacking */
   margin-top: 1%;
@@ -80,7 +79,8 @@ main{
   flex:auto;
   margin-top: 10%;
   border: 0.5vh solid #0e0146;
-  width: 90%;
+  width: 30vw;
+  height:30vh;
   height: 80%; /* Ensure this is defined */
   overflow: hidden; /* This will help hide overflow */
   position: relative; /* Add this if positioning is needed */
@@ -96,7 +96,7 @@ main{
 }
 .wrestlerPicture img{
   width:95%;
-  object-fit:contain;
+  object-fit:scale-down;
   flex:auto;
 }
 .wrestlerButton {
@@ -132,5 +132,10 @@ main{
     flex: none; /* Prevent flex-grow/shrink */
     max-width: none; /* Remove max-width restriction */
     margin-top: 0; /* Optional: Reset margin for better spacing */
+    padding:0px;
+  }
+  .wrestlerBox{
+    width:90vw;
+    height:fit-content;
   }
 }
