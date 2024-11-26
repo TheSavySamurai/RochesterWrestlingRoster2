@@ -124,7 +124,7 @@ main{
     justify-self:center;
     float:none;
     flex: 100%; /* Make the columns take up 100% of the container */
-    max-width: 100%; /* Ensure max width for one column */
+    max-width: 100vw; /* Ensure max width for one column */
     width: 100vw; /* Ensure each column takes full width */
     flex: none; /* Prevent flex-grow/shrink */
     max-width: none; /* Remove max-width restriction */
