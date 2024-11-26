@@ -91,7 +91,7 @@ main{
 .wrestlerPicture {
     display:flex;
     width: 100%; /* Ensure full width */
-    height: auto; /* Set height to auto to maintain aspect ratio */
+    height: 40vh; /* Set height to auto to maintain aspect ratio */
     border-bottom:#0e0146 0.5vh solid;
 }
 .wrestlerPicture img{
