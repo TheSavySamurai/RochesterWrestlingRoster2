@@ -96,8 +96,8 @@ main{
 }
 .wrestlerPicture img{
   width:95%;
+  height:100%;
   object-fit:scale-down;
-  flex:auto;
 }
 .wrestlerButton {
   border: #0e0146 0.1em solid;
