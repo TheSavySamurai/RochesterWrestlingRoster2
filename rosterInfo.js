@@ -72,10 +72,9 @@ document.addEventListener('DOMContentLoaded', function() {
         const numberOfWrestlers = wrestlers.length;
         for (let i = 0; i < numberOfWrestlers; i++) {
             var tempImageId = 'wrestlerPicture' + i; // ID for the image
-            var tempImage = document.getElementById(tempImageId);
-            if (tempImage) { // Check if the element exists
-                tempImage.src = wrestlers[i].image; // Set the source of the image
-                console.log(tempImage.src);
+            if (tempImageId) { // Check if the element exists
+                document.getElementById(tempImageId).src = wrestlers[i].image; // Set the source of the image
+                console.log(tempImageId.src);
             }
     
             // Additional code to set wrestler info...
