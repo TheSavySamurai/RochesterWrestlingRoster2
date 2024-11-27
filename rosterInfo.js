@@ -70,8 +70,13 @@ document.addEventListener('DOMContentLoaded', function () {
         for (let i = 0; i < numberOfWrestlers; i++) {
             var tempImageId = 'wrestlerPicture' + i; // ID for the image
             var tempImageName = "images/" + wrestlers[i].image;
+            var wrestlerNameId= 'wrestlerName' + i;
+            var wrestlerName=document.getElementById(wrestlerNameId);
             if (tempImageId && tempImageName) {
                 document.getElementById(tempImageId).src = tempImageName;
+                wrestlerName.innerHTML = wrestlers[i].name;
+            } else{
+                console.error("element not found");
             }
         }
     }
@@ -83,6 +88,7 @@ document.addEventListener('DOMContentLoaded', function () {
         button.addEventListener('click', function (event) {
             var clickedButtonId = this.id;
             var wrestlerNumber = clickedButtonId.replace('Button', ''); // Get the wrestler number
+            
             var wrestlerBoxId = 'wrestlerBox' + wrestlerNumber;
             var wrestlerBox = document.getElementById(wrestlerBoxId);
             var wrestlerInfoId = 'wrestlerInfo' + wrestlerNumber;
@@ -94,6 +100,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 var currentHeight = wrestlerBox.clientHeight; // Get current height in pixels
                 // Access the wrestler data using the wrestlerNumber
                 const wrestler = wrestlers[wrestlerNumber]; // Get the wrestler object
+
                 if (!isExpanded) {
                     // Store the original height on the first click
                     if (originalHeight === null) {
@@ -103,7 +110,7 @@ document.addEventListener('DOMContentLoaded', function () {
                     var newHeight = originalHeight + (originalHeight * 0.4);
                     wrestlerBox.style.height = newHeight + 'px'; // Set new height
                     // Display wrestler info
-                    wrestlerInfo.innerHTML = `Wrestler Name: ${wrestler.name}<br>Year: ${wrestler.year}<br>Weight: ${wrestler.weight}`;
+                    wrestlerInfo.innerHTML = `Year: ${wrestler.year}<br>Weight: ${wrestler.weight}`;
                     wrestlerInfo.classList.add('show'); // Show info
                     isExpanded = true; // Mark as expanded
                 } else {
