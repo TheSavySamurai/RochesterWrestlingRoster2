@@ -1,5 +1,5 @@
 * {
-  box-sizing: border-box;
+
   font-family:poppins;
 }
 body,
@@ -10,7 +10,7 @@ html {
   align-items: center;
 }
 body{
-  background-image: url(rochesterFalcon.jpg);
+  background-image: url(images/rochesterFalcon.jpg);
   background-repeat: no-repeat;
   background-size:contain;
   background-position: center;
@@ -72,6 +72,9 @@ body{
   justify-content:center;
   text-align:center;
 }
+.signupClosed span{
+  font-size:1.2em
+}
 .signupClosed button{
   margin-left:0%;
 }
@@ -102,6 +105,9 @@ body{
 }
 .loginOpen{
   visibility: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 .loginClosed{
   position:absolute;
@@ -144,16 +150,25 @@ label{
   font-size:2vh;
 }
 input {
-  background: #1a018b;
+  background: #ffffff;
   border-radius: 5vh;
   font-size:2vh;
   border: 0px;
-  width: 80%;
+  width: 40vh;
   height: 25%;
-  color: #fff;
+  color: #000;
 }.responsive-image{
   width:0%;
   content:none;
+}
+.loginOpen{
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+}
+#submitLogin{
+  height:5vh;
+  width:20vw;
 }
 @media screen and (max-width: 800px){
   .flexContainer{

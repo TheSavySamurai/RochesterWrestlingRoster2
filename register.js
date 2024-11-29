@@ -21,17 +21,21 @@ submit.addEventListener("click", function(event){
 
   const email = document.getElementById("signUpEmail").value;
   const password = document.getElementById("signupPword").value;
-
+  const teamCode = document.getElementById("teamCode").value;
+  if(teamCode == "1234"){
   createUserWithEmailAndPassword(auth, email, password)
   .then((userCredential) => {
-    const user = userCredential.user;
-    window.location.href="home.html";
-    // ...
-  })
-  .catch((error) => {
-    const errorCode = error.code;
-    const errorMessage = error.message;
-    alert(errorMessage);
-    // ..
-  });
+      const user = userCredential.user;
+      window.location.href="home.html";
+      // ...
+    })
+    .catch((error) => {
+      const errorCode = error.code;
+      const errorMessage = error.message;
+      alert(errorMessage);
+      // ..
+    });
+  } else{
+    alert("Invalid team code");
+  }
 });

@@ -10,6 +10,126 @@
       href="https://fonts.googleapis.com/css?family=Poppins"
       rel="stylesheet"
     />
+    <style>
+      /* Flexbox Layout Styles */
+.FlexContainer {
+  display:flex;
+  flex-direction: column;
+  background: #2900e0;
+  border:#0e0146 solid;
+  width:100vw;
+  height:fit-content;
+  justify-content: center;
+  align-items: center;
+  margin-top: 5%;
+}
+
+.column {
+  padding:5vw;
+  display: flex;
+  flex-direction: column; /* Ensures proper stacking */
+  margin-top: 1%;
+  float:left;
+  flex:40%; /* Allow columns to grow and shrink, taking up 40% of the container */
+  max-width: 50%; /* Ensure max width for two columns */
+  height: auto;
+  justify-content:space-evenly;
+}
+
+.wrestlerBox {
+  transition:0.3s ease;
+  display:flex;
+  flex:auto;
+  border: 0.5vh solid #0e0146;
+  width: 30vw;
+  height:50vh;
+  height: 80%; /* Ensure this is defined */
+  overflow: hidden; /* This will help hide overflow */
+  position: relative; /* Add this if positioning is needed */
+  display: flex; /* Enable flexbox */
+  flex-direction: column; /* Stack children vertically */
+  justify-content: space-between; /* Space between children */
+}
+.wrestlerPicture {
+    display:flex;
+    width: 100%; /* Ensure full width */
+    height: 40vh; /* Set height to auto to maintain aspect ratio */
+    border-bottom:#0e0146 0.5vh solid;
+}
+.wrestlerPicture img{
+  width:100%;
+  height:100%;
+  object-fit:scale-down;
+}
+.wrestlerButton {
+  border: #0e0146 0.1em solid;
+  height:auto;
+  width:100%;
+  padding-top:5%;
+  padding-bottom:5%;
+  text-align:center;
+  font-size:100%;
+  align-self: flex-end; /* Aligns the button to the right */
+}
+.wrestlerInfo{
+  display:none;
+  visibility: hidden;
+}
+.wrestlerName,.wrestlerInfo{
+  font-size:1rem;
+}
+.wrestlerInfo.show{
+  padding:0px;
+  display:block;
+  visibility: visible;
+  text-align:center;
+}
+.flexSortButton{
+  display:flex;
+  flex-direction:column;
+  width:100vw;
+  height:fit-content;
+}
+#sortButton{
+  align-self: center;
+  width:90vw;
+  height:10vh;
+  font-size:1.5em;
+}
+.sortOptions{
+  align-self:center;
+  visibility: hidden;
+  display:flex;
+  flex-direction: column;
+  height:0vh;
+}
+.sortOptions.show{
+  visibility: visible;
+  height:fit-content;
+}
+.sortOption{
+  height: 5vh;
+  width:90vw;
+}
+/* Responsive Styles */
+@media screen and (max-width: 800px) {
+  .column {
+    justify-self:center;
+    float:none;
+    flex: 100%; /* Make the columns take up 100% of the container */
+    max-width: 100vw; /* Ensure max width for one column */
+    width: 100vw; /* Ensure each column takes full width */
+    flex: none; /* Prevent flex-grow/shrink */
+    max-width: none; /* Remove max-width restriction */
+    margin-top: 0; /* Optional: Reset margin for better spacing */
+    padding:0px;
+  }
+  .wrestlerBox{
+    width:100%;
+    height:fit-content;
+  }
+}
+    </style>
   </head>
   <body>
     <div class="header">
@@ -27,6 +147,14 @@
         </div>
       </nav>
       <main>
+        <div class="flexSortButton">
+          <button id = "sortButton"onClick="sortButtonClicked()">Sort &#9776;</button>
+          <div class="sortOptions"id="sortOptions">
+            <button class="sortOption"onClick=sortWrestlers()>A-Z</button>
+            <button class="sortOption"onClick=sortWrestlers()>Z-A</button>
+            <button class="sortOption"onClick=sortWrestlers()>Grade</button>
+          </div>
+        </div>
         <div class="flexContainer">
           <div class="column">
             <!-- Wrestler Boxes 0 to 19 -->
@@ -358,5 +486,6 @@
       </main>
     </div>
     <script src="rosterInfo.js"></script>
+    <script src="sortBTN.js"></script>
   </body>
 </html>

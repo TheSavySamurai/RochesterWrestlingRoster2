@@ -1,45 +1,45 @@
 // Hardcoded CSV data as a string
-const csvData = `Name,ClassName,Weight Class,Image
-Adam Glinski,,,Adam-Glinski.JPG
-Aiden Mullins,Freshman,,Aiden-Mullins.JPG
-Amelia Meier,Sophomore,,Amelia-Meier.JPG
-Anderson Wilcox,Sophomore,,Anderson-Wilcox.JPG
-Austin Ashmore,Freshman,,Austin-Ashmore.JPG
-Breandan Roscoe,,,Breandan-Roscoe.JPG
-Caden Webb,Sophomore,,Caden-Webb.JPG
-Cam Williams,,,Cam-Williams.JPG
-Camoran Juliah,Freshman,,Camoran-Juliah.JPG
-Christiano Butress,,,Christiano-Butress.JPG
-Damian Yburra,,,Damian-Yburra.JPG
-Dillon DeWitt,Sophomore,,
-Gabe Gillum,,,Gabe-Gillum.JPG
-Gael Cruz,Sophomore,,Gael-Cruz.JPG
-Grant Laporte,Junior,,Grant-Laporte.JPG
-Griffin Merchant,,,
-Hudson Blake,Sophomore,,Hudson-Blake.JPG
-Ian Barbee,Sophomore,,Ian-Barbee.JPG
-JT Kissinger,Freshman,,JT-Kissinger.JPG
-Jack Lower,Junior,,Jack-Lower.JPG
-Jack Pokorney,Sophomore,,Jack-Pokorney.JPG
-Jackson Zook,Freshman,,Jackson-Zook.JPG
-Jimmy Rohman,Sophomore,,Jimmy-Rohman.JPG
-John Marten,Freshman,,John-Marten.JPG
-Julian Abrishaman,Sophomore,,Julian-Abrishaman.JPG
-Katie Carpenter,Sophomore,,Katie-Carpenter.JPG
-Keagan Pfiffer,Freshman,,Keagan-Pfiffer.JPG
-Logan Dembsey,Sophomore,,Logan-Dembsey.JPG
-Mark Jones,Sophomore,,Mark-Jones.JPG
-Mathias Hernandez,Freshman,,Mathias-Hernandez.JPG
-Miles Metzen,Freshman,,Miles-Metzen.JPG
-Ryan Cannon,Sophomore,,Ryan-Cannon.JPG
-Santiago De La Rosa,Freshman,,Santiago-De-La-Rosa.JPG
-Sayani Palomet,Sophomore,,Sayani-Palomet.JPG
-Seth Payne,Junior,,Seth-Payne.JPG
-Stew Kissinger,,,Stew-Kissinger.JPG
-Tristan Hiatt,,,Tristan-Hiatt.JPG
-Jacob Weaver,Freshman,,Weaver-Beaver.JPG
-Zach Ming,Sophomore,,Zach-Ming.JPG
-Zoran Khawnja,Sophomore,,Zoran-Khawnja.JPG`;
+const csvData = "Name,ClassName,Weight Class,Image\n" +
+"Adam Glinski,Junior,,Adam-Glinski.JPG\n" +
+"Aiden Mullins,Freshman,,Aiden-Mullins.JPG\n" +
+"Amelia Meier,Sophomore,,Amelia-Meier.JPG\n" +
+"Anderson Wilcox,Sophomore,,Anderson-Wilcox.JPG\n" +
+"Austin Ashmore,Freshman,,Austin-Ashmore.JPG\n" +
+"Breandan Roscoe,Junior,,Breandan-Roscoe.JPG\n" +
+"Caden Webb,Sophomore,,Caden-Webb.JPG\n" +
+"Cam Williams,Senior,,Cam-Williams.JPG\n" +
+"Camoran Juliah,Freshman,,Camoran-Juliah.JPG\n" +
+"Christiano Butress,Junior,,Christiano-Butress.JPG\n" +
+"Damian Yburra,Senior,,Damian-Yburra.JPG\n" +
+"Dillon DeWitt,Sophomore,,\n" +
+"Gabe Gillum,Freshman,,Gabe-Gillum.JPG\n" +
+"Gael Cruz,Sophomore,,Gael-Cruz.JPG\n" +
+"Grant Laporte,Junior,,Grant-Laporte.JPG\n" +
+"Griffin Merchant,Senior,,Griffin-Merchant.JPG\n" +
+"Hudson Blake,Sophomore,,Hudson-Blake.JPG\n" +
+"Ian Barbee,Sophomore,,Ian-Barbee.JPG\n" +
+"JT Kissinger,Freshman,,JT-Kissinger.JPG\n" +
+"Jack Lower,Junior,,Jack-Lower.JPG\n" +
+"Jack Pokorney,Sophomore,,Jack-Pokorney.JPG\n" +
+"Jackson Zook,Freshman,,Jackson-Zook.JPG\n" +
+"Jimmy Rohman,Sophomore,,Jimmy-Rohman.JPG\n" +
+"John Marten,Freshman,,John-Marten.JPG\n" +
+"Julian Abrishaman,Sophomore,,Julian-Abrishaman.JPG\n" +
+"Katie Carpenter,Sophomore,,Katie-Carpenter.JPG\n" +
+"Keagan Pfiffer,Freshman,,Keagan-Pfiffer.JPG\n" +
+"Logan Dembsey,Sophomore,,Logan-Dembsey.JPG\n" +
+"Mark Jones,Sophomore,,Mark-Jones.JPG\n" +
+"Mathias Hernandez,Freshman,,Mathias-Hernandez.JPG\n" +
+"Miles Metzen,Freshman,,Miles-Metzen.JPG\n" +
+"Ryan Cannon,Sophomore,,Ryan-Cannon.JPG\n" +
+"Santiago De La Rosa,Freshman,,Santiago-De-La-Rosa.JPG\n" +
+"Sayani Palomet,Sophomore,,Sayani-Palomet.JPG\n" +
+"Seth Payne,Junior,,Seth-Payne.JPG\n" +
+"Stew Kissinger,Senior,,Stew-Kissinger.JPG\n" +
+"Tristan Hiatt,Junior,,Tristan-Hiatt.JPG\n" +
+"Weaver Beaver,Freshman,,Weaver-Beaver.JPG\n" +
+"Zach Ming,Sophomore,,Zach-Ming.JPG\n" +
+"Zoran Khawnja,Sophomore,,Zoran-Khawnja.JPG";
 document.addEventListener('DOMContentLoaded', function () {
     const wrestlers = parseCSV(csvData); // Parse CSV data
     displayData(wrestlers); // Display data
@@ -63,6 +63,11 @@ document.addEventListener('DOMContentLoaded', function () {
             }
         }
         return wrestlers; // Return the array of wrestlers
+    }
+    //function to sort wrestlers
+    function sortWrestlers(){
+        let wrestlerNames= wrestlers.name;
+        console.log(wrestlerNames);
     }
     // Function to display data
     function displayData(wrestlers) { // Accept wrestlers as parameter
@@ -125,3 +130,4 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     });
 });
+//sort wrestlers
