@@ -40,11 +40,27 @@ const csvData = "Name,ClassName,Weight Class,Image\n" +
 "Weaver Beaver,Freshman,,Weaver-Beaver.JPG\n" +
 "Zach Ming,Sophomore,,Zach-Ming.JPG\n" +
 "Zoran Khawnja,Sophomore,,Zoran-Khawnja.JPG";
+
 document.addEventListener('DOMContentLoaded', function () {
     const wrestlers = parseCSV(csvData); // Parse CSV data
     displayData(wrestlers); // Display data
-    var buttons = document.getElementsByClassName('wrestlerButton');
-    var buttonArray = Array.from(buttons);
+
+    // Sort button
+    const AtoZButton = document.getElementById('AtoZ');
+    const ZtoAButton = document.getElementById('ZtoA');
+    const sortByGradeBTN = document.getElementById('Grade');
+    AtoZButton.addEventListener('click', function() {
+        sortWrestlersAtoZ(wrestlers);
+        displayData(wrestlers); // Update display after sorting
+    });
+    ZtoAButton.addEventListener('click', function() {
+        sortWrestlersZtoA(wrestlers);
+        displayData(wrestlers); // Update display after sorting
+    });
+    sortByGradeBTN.addEventListener('click', function() {
+        sortWrestlersByGrade(wrestlers);
+        displayData(wrestlers); // Update display after sorting
+    });
     // Function to parse CSV data
     function parseCSV(text) {
         const rows = text.split('\n');
@@ -62,38 +78,51 @@ document.addEventListener('DOMContentLoaded', function () {
                 });
             }
         }
+        console.log(wrestlers);
         return wrestlers; // Return the array of wrestlers
     }
-    //function to sort wrestlers
-    function sortWrestlers(){
-        let wrestlerNames= wrestlers.name;
-        console.log(wrestlerNames);
-    }
+
     // Function to display data
     function displayData(wrestlers) { // Accept wrestlers as parameter
         const numberOfWrestlers = wrestlers.length;
         for (let i = 0; i < numberOfWrestlers; i++) {
             var tempImageId = 'wrestlerPicture' + i; // ID for the image
             var tempImageName = "images/" + wrestlers[i].image;
-            var wrestlerNameId= 'wrestlerName' + i;
-            var wrestlerName=document.getElementById(wrestlerNameId);
+            var wrestlerNameId = 'wrestlerName' + i;
+            var wrestlerName = document.getElementById(wrestlerNameId);
             if (tempImageId && tempImageName) {
                 document.getElementById(tempImageId).src = tempImageName;
                 wrestlerName.innerHTML = wrestlers[i].name;
-            } else{
+            } else {
                 console.error("element not found");
             }
         }
     }
-    // Call displayData with wrestlers
-    displayData(wrestlers); // Pass wrestlers to displayData
+
+    // Function to sort wrestlers alphabetically by name
+    function sortWrestlersAtoZ(wrestlers) {
+        wrestlers.sort((a, b) => a.name.localeCompare(b.name));
+    }
+    function sortWrestlersZtoA(wrestlers) {
+        wrestlers.sort((a, b) => b.name.localeCompare(a.name));
+    }
+    function sortWrestlersByGrade(wrestlers) {
+        const gradeOrder = {
+            'Freshman': 1,
+            'Sophomore': 2,
+            'Junior': 3,
+            'Senior': 4
+        };
+        wrestlers.sort((a, b) => gradeOrder[a.year] - gradeOrder[b.year]);
+    }
+    var buttons = document.getElementsByClassName('wrestlerButton');
+    var buttonArray = Array.from(buttons);
     buttonArray.forEach(function (button) {
         var originalHeight = null; // Original height
         var isExpanded = false; // Flag to track if the box is expanded
         button.addEventListener('click', function (event) {
             var clickedButtonId = this.id;
             var wrestlerNumber = clickedButtonId.replace('Button', ''); // Get the wrestler number
-            
             var wrestlerBoxId = 'wrestlerBox' + wrestlerNumber;
             var wrestlerBox = document.getElementById(wrestlerBoxId);
             var wrestlerInfoId = 'wrestlerInfo' + wrestlerNumber;
@@ -130,4 +159,3 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     });
 });
-//sort wrestlers
