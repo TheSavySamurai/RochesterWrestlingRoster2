@@ -10,7 +10,48 @@
       rel="stylesheet"
     />
     <style>
-      
+      *{
+        box-sizing: border-box;
+      }
+      .title{
+        font-size:200%;
+        font-weight: bold;
+        background:#fff;
+        border:#1c028d solid 2vh;
+        padding:3vh;
+        border-radius: 4vh;
+      }
+      .subtitle{
+        font-size:150%;
+        font-weight: bold;
+      }
+      .caption{
+        font-size:125%;
+        font-weight: bold;
+      }
+      section{
+        display:flex;
+        flex-direction: column;
+        align-items: center;
+        background:#2900e0;
+        margin-top:5vh;
+        width:fit-content;
+        height:fit-content;
+        border-radius:4vh;
+        gap:2vh;
+      }
+      .informationArea{
+        display:flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content:space-evenly;
+        column-count: 3;
+        column-gap:10%;
+        column-width:30%;
+        background:#2900e0;
+        color:#fff;
+        padding:3vw;
+      }
     </style>
   </head>
   <body>
@@ -30,7 +71,21 @@
       </nav>
       <main>
         <section>
-          
+          <div>
+            <span class="title">Credits</span>
+            <div class = "informationArea"style="margin-top:5vh;">
+              <span class = "subtitle">Code:</span><span class="caption">Dillon DeWitt</span>
+            </div>
+            <div class = "informationArea">
+              <span class = "subtitle">Photos:</span><span class="caption">Warren DeWitt</span>
+            </div>
+            <div class = "informationArea">
+              <span class="caption">This website was created using HTML, CSS, and JavaScript.</span>
+            </div>
+            <div class = "informationArea">
+              <span class="caption">No harm is intended with the use of any images or information on this website.</span>
+            </div>
+          </div>
         </section>
       </main>
     </div>

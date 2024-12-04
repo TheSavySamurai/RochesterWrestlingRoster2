@@ -3,12 +3,53 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Help</title>
     <link rel="stylesheet" href="styles.css" />
     <link
       href="https://fonts.googleapis.com/css?family=Poppins"
       rel="stylesheet"
     />
+    <style>
+      main{
+        display:flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+      }
+      form{
+        display: flex;
+        flex-direction: column;
+        width:fit-content;
+        height:auto;
+        
+        color:#fff;
+        margin-bottom: 4vh;
+        margin-top:4vh;
+      }
+      form label{
+        background:#1c028d;
+        color:#fff; 
+        padding:3vh 0px 3vh 0px;
+        width:40vw;
+        border-radius:10vh;
+      }
+      form input{
+        color:#fff;
+        padding:3vh 0px 3vh 0px;
+      }
+      form button{
+        background-color: #1c028d;
+        color:#fff;
+        border-radius:10vh;
+        width:20vw;
+        height:6vh;
+        align-self:center;
+      }
+      #message{
+        width:40vw;
+        height:20vh;
+      }
+    </style>
   </head>
   <body>
     <div class="header">
@@ -27,9 +68,19 @@
       </nav>
       <main>
         <section>
-          <span style = "font-size: 2rem;">If you were having any technical issues, <br>please contact me at: dillonld787@gmail.com</span><br><br><br>
-          <span style = "font-size:1.5rem;">This website was made by Dillon DeWitt with HTML , CSS, and JavaScript.</span>
+          <div style="background:#1c028d;color:#fff;margin-top:4vh;padding:3vw;border-radius: 10vw;">
+            <span style = "font-size: 2rem;background:#1c028d;color:#fff;">If you are having any technical issues, <br>please contact me at: <br>dillonld787@gmail.com<br> or fill out the form below</span><br><br><br>
+          </div>
         </section>
+          <form action="https://formsubmit.co/dillonld787@gmail.com" method="POST" enctype="text/plain">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" required></textarea>
+            <button type="submit">Send</button>
+          </form>
       </main>
     </div>
   </body>
