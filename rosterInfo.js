@@ -62,6 +62,8 @@ document.addEventListener('DOMContentLoaded', function () {
     const AtoZButton = document.getElementById('AtoZ');
     const ZtoAButton = document.getElementById('ZtoA');
     const sortByGradeBTN = document.getElementById('Grade');
+    const showAllBTN = document.getElementById("showAll");
+
     AtoZButton.addEventListener('click', function() {
         sortWrestlersAtoZ(wrestlers);
         displayData(wrestlers); // Update display after sorting
@@ -73,6 +75,14 @@ document.addEventListener('DOMContentLoaded', function () {
     sortByGradeBTN.addEventListener('click', function() {
         sortWrestlersByGrade(wrestlers);
         displayData(wrestlers); // Update display after sorting
+    });
+    showAllBTN.addEventListener('click', function(){
+        var boxes;
+            for(i = 0; i < wrestlers.length; i++){
+                boxes = document.getElementById("wrestlerBox" + i);
+                boxes.style.display = "block";
+            }
+            sortWrestlersAtoZ(wrestlers);
     });
     // Function to parse CSV data
     function parseCSV(text) {
