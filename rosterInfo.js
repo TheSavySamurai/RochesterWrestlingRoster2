@@ -114,12 +114,26 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // Function to sort wrestlers alphabetically by name
     function sortWrestlersAtoZ(wrestlers) {
+            for(i = 0; i < wrestlers.length; i++){
+                boxes = document.getElementById("wrestlerBox" + i);
+                boxes.style.display = "block";
+            }
         wrestlers.sort((a, b) => a.name.localeCompare(b.name));
     }
     function sortWrestlersZtoA(wrestlers) {
+        var boxes;
+            for(i = 0; i < wrestlers.length; i++){
+                boxes = document.getElementById("wrestlerBox" + i);
+                boxes.style.display = "block";
+            }
         wrestlers.sort((a, b) => b.name.localeCompare(a.name));
     }
     function sortWrestlersByGrade(wrestlers) {
+        var boxes;
+            for(i = 0; i < wrestlers.length; i++){
+                boxes = document.getElementById("wrestlerBox" + i);
+                boxes.style.display = "block";
+            }
         const gradeOrder = {
             'Freshman': 1,
             'Sophomore': 2,
@@ -128,12 +142,30 @@ document.addEventListener('DOMContentLoaded', function () {
         };
         wrestlers.sort((a, b) => gradeOrder[a.year] - gradeOrder[b.year]);
     }
+    var searchBtn = document.getElementById("searchButton");
+    var searchInput = document.getElementById("searchBar");
+    searchBtn.addEventListener("click", function() {
+        console.log("search btn clicked");
+        var searchValue = searchInput.value.toLowerCase();
+        var box1 = document.getElementById("wrestlerBox0");
+        var boxes;
+        var filteredWrestlers = wrestlers.filter(function(wrestler) {
+            return wrestler.name.toLowerCase().includes(searchValue);
+        });
+            displayData(filteredWrestlers);
+            for(i = 1; i < wrestlers.length; i++){
+                boxes = document.getElementById("wrestlerBox" + i);
+                boxes.style.display = "none";
+            }
+         });
+    
     var buttons = document.getElementsByClassName('wrestlerButton');
     var buttonArray = Array.from(buttons);
     buttonArray.forEach(function (button) {
         var originalHeight = null; // Original height
         var isExpanded = false; // Flag to track if the box is expanded
         button.addEventListener('click', function (event) {
+            
             var clickedButtonId = this.id;
             var wrestlerNumber = clickedButtonId.replace('Button', ''); // Get the wrestler number
             var wrestlerBoxId = 'wrestlerBox' + wrestlerNumber;
@@ -154,8 +186,7 @@ document.addEventListener('DOMContentLoaded', function () {
                         originalHeight = currentHeight; // Set original height
                     }
                     // Increase height by 40%
-                    var newHeight = originalHeight + (originalHeight * 0.4);
-                    wrestlerBox.style.height = newHeight + 'px'; // Set new height
+                    wrestlerBox.style.height = "fit-content"; // Set new height
                     // Display wrestler info
                     wrestlerInfo.innerHTML = `Year: ${wrestler.year}<br>Weight: ${wrestler.weight}`;
                     wrestlerInfo.classList.add('show'); // Show info
