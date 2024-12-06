@@ -54,6 +54,17 @@
         padding: 10px; 
         margin:0 0 1em 0;
       }
+      .bannerSection{
+        width:100vw;
+        height:30vh;
+        background:#2900e0;
+        border-bottom:#1c028d solid 2vh;
+      }
+      .bannerSection img{
+        width:100%;
+        height:100%;
+        object-fit:cover;
+      }
       @media screen and (max-width: 800px) {
         .informationArea{
           flex-direction: column;
@@ -62,23 +73,28 @@
     </style>
   </head>
   <body>
-    <div class="header">
-      <div id="headArea">
-        <h1>Rochester Wrestling</h1>
-      </div>
-    </div>
+    
     <div class="content">
       <nav>
         <div class="navBar" id="navBar">
           <a href="home.html">Home</a>
-          <a href="fullRoster.html">Roster</a>
+          <a href="fullRoster.html">Roster</a> 
+          <img id="falconNavImg"src="images/rochesterFalcon.png">
           <a href="help.html">Help</a>
           <a href="about.html">Site info</a>
         </div>
       </nav>
+      <div class="header">
+        <div id="headArea">
+          <h1>Rochester Wrestling</h1>
+        </div>
+      </div>
       <main>
+        <div class="bannerSection">
+          <img src="images/rochesterBanner.jpg" alt="Rochester wrestlers with flag">
+        </div>
         <section>
-          <img src="images/rochesterFalcon.jpg"><br>
+         <br>
           <span class="title">About the Team</span>
           <div class="informationArea">
             <div class="headCoach">
