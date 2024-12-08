@@ -14,6 +14,7 @@
       /* Flexbox Layout Styles */
 html,body{
   overflow-x:hidden;
+  z-index:1;
 }
 .column {
   display: grid; 
@@ -46,7 +47,7 @@ html,body{
 .wrestlerPicture img{
   width:100%;
   height:fit-content;
-  object-fit:cover;
+  object-fit:scale-down;
 }
 .wrestlerButton {
   border: #0e0146 0.1em solid;
@@ -114,6 +115,21 @@ html,body{
   width:10%;
   height:5vh;
 }
+.toTop{
+  position:fixed;
+  right:2vw;
+  bottom:5vh;
+  z-index: 999;
+}
+.toTop button{
+  width:15vw;
+  height:15vw;
+  background:#2900e0;
+  border-radius:50%;
+  border:none;
+  color:#fff;
+  font-size:200%;
+}
 /* Responsive Styles */
 @media screen and (max-width: 800px) {
   .column {
@@ -141,7 +157,7 @@ html,body{
         <div class="navBar" id="navBar">
           <a href="home.html">Home</a>
           <a href="fullRoster.html">Roster</a>
-          <img id="falconNavImg"src="images/rochesterFalcon.png">
+          <img id="falconNavImg"src="images/rochesterfalcon.png">
           <a href="help.html">Help</a>
           <a href="about.html">Site Info</a>
         </div>
@@ -152,6 +168,7 @@ html,body{
         </div>
     </div>
       <main>
+        
         <div class="flexSortButton">
           <button id = "sortButton"onClick="sortButtonClicked()">Sort &#9776;</button>
           <div class="sortOptions"id="sortOptions">
@@ -164,6 +181,9 @@ html,body{
             </div>
             <button id="showAll" class="sortOption"width="80%">Show All</button>
           </div>
+        </div>
+        <div class="toTop">
+          <button onClick="toTopPressed()">&#8593;</button>
         </div>
           <div class="column">
             <!-- Wrestler Boxes 0 to 19 -->
@@ -595,5 +615,6 @@ html,body{
     </div>
     <script src="rosterInfo.js"></script>
     <script src="sortBTN.js"></script>
+    <script src="toTop.js"></script>
   </body>
 </html>
