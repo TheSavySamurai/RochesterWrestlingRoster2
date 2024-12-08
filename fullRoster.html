@@ -85,6 +85,10 @@ html,body{
   width:90vw;
   height:10vh;
   font-size:1.5em;
+  background:#ffffff;
+}
+#sortButton:hover{
+  background:#969696;
 }
 .sortOptions{
   align-self:center;
@@ -92,12 +96,17 @@ html,body{
   display:flex;
   flex-direction: column;
   height:0vh;
+  
+}
+.sortOption:hover{
+  background:#969696;
 }
 .sortOptions.show{
   visibility: visible;
   height:fit-content;
 }
 .sortOption{
+  background:#ffffff;
   height: 5vh;
   width:90vw;
 }
@@ -126,8 +135,8 @@ html,body{
 }
 .toTop button{
   text-align:center;
-  width:15vw;
-  height:15vw;
+  width:5vw;
+  height:5vw;
   background:#2900e0;
   border-radius:50%;
   border:none;
@@ -136,6 +145,10 @@ html,body{
 }
 /* Responsive Styles */
 @media screen and (max-width: 800px) {
+  .toTop button{
+    width:15vw;
+    height:15vw;
+  }
   .column {
     grid-template-columns: repeat(1, 3fr); 
     justify-self:center;
