@@ -16,6 +16,7 @@ html,body{
   overflow-x:hidden;
   z-index:1;
 }
+
 .column {
   display: grid; 
    grid-template-columns: repeat(2, 3fr); 
@@ -32,6 +33,7 @@ html,body{
   display:flex;
   flex-direction: column; /* Stack children vertically */
   border: 0.5vh solid #0e0146;
+  border-radius:5vh;
   width: 30vw;
   height:fit-content;
   overflow: hidden; /* This will help hide overflow */
@@ -50,13 +52,15 @@ html,body{
   object-fit:scale-down;
 }
 .wrestlerButton {
+  background:#0e0146;
+  color:#fff;
   border: #0e0146 0.1em solid;
   height:auto;
   width:100%;
   padding-top:5%;
   padding-bottom:5%;
   text-align:center;
-  font-size:100%;
+  font-size:1.5em;
 }
 .wrestlerInfo{
   display:none;
@@ -174,6 +178,7 @@ html,body{
         <div class="navBar" id="navBar">
           <a href="home.html">Home</a>
           <a href="fullRoster.html">Roster</a>
+          <a href="rules.html">Rules</a>
           <img id="falconNavImg"src="images/rochesterfalcon.png">
           <a href="help.html">Help</a>
           <a href="about.html">Site Info</a>
@@ -210,7 +215,7 @@ html,body{
               </div>
               <span class="wrestlerName" id="wrestlerName0">Wrestler Name:</span>
               <span class="wrestlerInfo" id="wrestlerInfo0">Weight:<br>Grade:</span>
-              <button class="wrestlerButton" id="Button0">Wrestler Info</button>
+              <button class="wrestlerButton" id="Button0">More Info</button>
             </div>
             <div class="wrestlerBox" id="wrestlerBox1">
               <div class="wrestlerPicture">
@@ -218,7 +223,7 @@ html,body{
               </div>
               <span class="wrestlerName" id="wrestlerName1">Wrestler Name:</span>
               <span class="wrestlerInfo" id="wrestlerInfo1">Weight:<br>Grade:</span>
-              <button class="wrestlerButton" id="Button1">Wrestler Info</button>
+              <button class="wrestlerButton" id="Button1">More Info</button>
             </div>
             <div class="wrestlerBox" id="wrestlerBox2">
               <div class="wrestlerPicture">
@@ -226,7 +231,7 @@ html,body{
               </div>
               <span class="wrestlerName" id="wrestlerName2">Wrestler Name:</span>
               <span class="wrestlerInfo" id="wrestlerInfo2">Weight:<br>Grade:</span>
-              <button class="wrestlerButton" id="Button2">Wrestler Info</button>
+              <button class="wrestlerButton" id="Button2">More Info</button>
             </div>
             <div class="wrestlerBox" id="wrestlerBox3">
               <div class="wrestlerPicture">
@@ -234,7 +239,7 @@ html,body{
               </div>
               <span class="wrestlerName" id="wrestlerName3">Wrestler Name:</span>
               <span class="wrestlerInfo" id="wrestlerInfo3">Weight:<br>Grade:</span>
-              <button class="wrestlerButton" id="Button3">Wrestler Info</button>
+              <button class="wrestlerButton" id="Button3">More Info</button>
             </div>
             <div class="wrestlerBox" id="wrestlerBox4">
               <div class="wrestlerPicture">
@@ -242,7 +247,7 @@ html,body{
               </div>
               <span class="wrestlerName" id="wrestlerName4">Wrestler Name:</span>
               <span class="wrestlerInfo" id="wrestlerInfo4">Weight:<br>Grade:</span>
-              <button class="wrestlerButton" id="Button4">Wrestler Info</button>
+              <button class="wrestlerButton" id="Button4">More Info</button>
             </div>
             <div class="wrestlerBox" id="wrestlerBox5">
               <div class="wrestlerPicture">
@@ -250,7 +255,7 @@ html,body{
               </div>
               <span class="wrestlerName" id="wrestlerName5">Wrestler Name:</span>
               <span class="wrestlerInfo" id="wrestlerInfo5">Weight:<br>Grade:</span>
-              <button class="wrestlerButton" id="Button5">Wrestler Info</button>
+              <button class="wrestlerButton" id="Button5">More Info</button>
             </div>
             <div class="wrestlerBox" id="wrestlerBox6">
               <div class="wrestlerPicture">
@@ -258,7 +263,7 @@ html,body{
               </div>
               <span class="wrestlerName" id="wrestlerName6">Wrestler Name:</span>
               <span class="wrestlerInfo" id="wrestlerInfo6">Weight:<br>Grade:</span>
-              <button class="wrestlerButton" id="Button6">Wrestler Info</button>
+              <button class="wrestlerButton" id="Button6">More Info</button>
             </div>
             <div class="wrestlerBox" id="wrestlerBox7">
               <div class="wrestlerPicture">
@@ -266,7 +271,7 @@ html,body{
               </div>
               <span class="wrestlerName" id="wrestlerName7">Wrestler Name:</span>
               <span class="wrestlerInfo" id="wrestlerInfo7">Weight:<br>Grade:</span>
-              <button class="wrestlerButton" id="Button7">Wrestler Info</button>
+              <button class="wrestlerButton" id="Button7">More Info</button>
             </div>
             <div class="wrestlerBox" id="wrestlerBox8">
               <div class="wrestlerPicture">
@@ -274,7 +279,7 @@ html,body{
               </div>
               <span class="wrestlerName" id="wrestlerName8">Wrestler Name:</span>
               <span class="wrestlerInfo" id="wrestlerInfo8">Weight:<br>Grade:</span>
-              <button class="wrestlerButton" id="Button8">Wrestler Info</button>
+              <button class="wrestlerButton" id="Button8">More Info</button>
             </div>
             <div class="wrestlerBox" id="wrestlerBox9">
               <div class="wrestlerPicture">
@@ -282,7 +287,7 @@ html,body{
               </div>
               <span class="wrestlerName" id="wrestlerName9">Wrestler Name:</span>
               <span class="wrestlerInfo" id="wrestlerInfo9">Weight:<br>Grade:</span>
-              <button class="wrestlerButton" id="Button9">Wrestler Info</button>
+              <button class="wrestlerButton" id="Button9">More Info</button>
             </div>
             <div class="wrestlerBox" id="wrestlerBox10">
               <div class="wrestlerPicture">
@@ -290,7 +295,7 @@ html,body{
               </div>
               <span class="wrestlerName" id="wrestlerName10">Wrestler Name:</span>
               <span class="wrestlerInfo" id="wrestlerInfo10">Weight:<br>Grade:</span>
-              <button class="wrestlerButton" id="Button10">Wrestler Info</button>
+              <button class="wrestlerButton" id="Button10">More Info</button>
             </div>
             <div class="wrestlerBox" id="wrestlerBox11">
               <div class="wrestlerPicture">
@@ -298,7 +303,7 @@ html,body{
               </div>
               <span class="wrestlerName" id="wrestlerName11">Wrestler Name:</span>
               <span class="wrestlerInfo" id="wrestlerInfo11">Weight:<br>Grade:</span>
-              <button class="wrestlerButton" id="Button11">Wrestler Info</button>
+              <button class="wrestlerButton" id="Button11">More Info</button>
             </div>
             <div class="wrestlerBox" id="wrestlerBox12">
               <div class="wrestlerPicture">
@@ -306,7 +311,7 @@ html,body{
               </div>
               <span class="wrestlerName" id="wrestlerName12">Wrestler Name:</span>
               <span class="wrestlerInfo" id="wrestlerInfo12">Weight:<br>Grade:</span>
-              <button class="wrestlerButton" id="Button12">Wrestler Info</button>
+              <button class="wrestlerButton" id="Button12">More Info</button>
             </div>
             <div class="wrestlerBox" id="wrestlerBox13">
               <div class="wrestlerPicture">
@@ -314,7 +319,7 @@ html,body{
               </div>
               <span class="wrestlerName" id="wrestlerName13">Wrestler Name:</span>
               <span class="wrestlerInfo" id="wrestlerInfo13">Weight:<br>Grade:</span>
-              <button class="wrestlerButton" id="Button13">Wrestler Info</button>
+              <button class="wrestlerButton" id="Button13">More Info</button>
             </div>
             <div class="wrestlerBox" id="wrestlerBox14">
               <div class="wrestlerPicture">
@@ -322,7 +327,7 @@ html,body{
               </div>
               <span class="wrestlerName" id="wrestlerName14">Wrestler Name:</span>
               <span class="wrestlerInfo" id="wrestlerInfo14">Weight:<br>Grade:</span>
-              <button class="wrestlerButton" id="Button14">Wrestler Info</button>
+              <button class="wrestlerButton" id="Button14">More Info</button>
             </div>
             <div class="wrestlerBox" id="wrestlerBox15">
               <div class="wrestlerPicture">
@@ -330,7 +335,7 @@ html,body{
               </div>
               <span class="wrestlerName" id="wrestlerName15">Wrestler Name:</span>
               <span class="wrestlerInfo" id="wrestlerInfo15">Weight:<br>Grade:</span>
-              <button class="wrestlerButton" id="Button15">Wrestler Info</button>
+              <button class="wrestlerButton" id="Button15">More Info</button>
             </div>
             <div class="wrestlerBox" id="wrestlerBox16">
               <div class="wrestlerPicture">
@@ -338,7 +343,7 @@ html,body{
               </div>
               <span class="wrestlerName" id="wrestlerName16">Wrestler Name:</span>
               <span class="wrestlerInfo" id="wrestlerInfo16">Weight:<br>Grade:</span>
-              <button class="wrestlerButton" id="Button16">Wrestler Info</button>
+              <button class="wrestlerButton" id="Button16">More Info</button>
             </div>
             <div class="wrestlerBox" id="wrestlerBox17">
               <div class="wrestlerPicture">
@@ -346,7 +351,7 @@ html,body{
               </div>
               <span class="wrestlerName" id="wrestlerName17">Wrestler Name:</span>
               <span class="wrestlerInfo" id="wrestlerInfo17">Weight:<br>Grade:</span>
-              <button class="wrestlerButton" id="Button17">Wrestler Info</button>
+              <button class="wrestlerButton" id="Button17">More Info</button>
             </div>
             <div class="wrestlerBox" id="wrestlerBox18">
               <div class="wrestlerPicture">
@@ -354,7 +359,7 @@ html,body{
               </div>
               <span class="wrestlerName" id="wrestlerName18">Wrestler Name:</span>
               <span class="wrestlerInfo" id="wrestlerInfo18">Weight:<br>Grade:</span>
-              <button class="wrestlerButton" id="Button18">Wrestler Info</button>
+              <button class="wrestlerButton" id="Button18">More Info</button>
             </div>
             <div class="wrestlerBox" id="wrestlerBox19">
               <div class="wrestlerPicture">
@@ -362,14 +367,14 @@ html,body{
               </div>
               <span class="wrestlerName" id="wrestlerName19">Wrestler Name:</span>
               <span class="wrestlerInfo" id="wrestlerInfo19">Weight:<br>Grade:</span>
-              <button class="wrestlerButton" id="Button19">Wrestler Info</button>
+              <button class="wrestlerButton" id="Button19">More Info</button>
             </div><div class="wrestlerBox" id="wrestlerBox20">
               <div class="wrestlerPicture">
                 <img src="images/rochesterFalcon.jpg" alt="Wrestler 20" id="wrestlerPicture20" />
               </div>
               <span class="wrestlerName" id="wrestlerName20">Wrestler Name:</span>
               <span class="wrestlerInfo" id="wrestlerInfo20">Weight:<br>Grade:</span>
-              <button class="wrestlerButton" id="Button20">Wrestler Info</button>
+              <button class="wrestlerButton" id="Button20">More Info</button>
             </div>
             <div class="wrestlerBox" id="wrestlerBox21">
               <div class="wrestlerPicture">
@@ -377,7 +382,7 @@ html,body{
               </div>
               <span class="wrestlerName" id="wrestlerName21">Wrestler Name:</span>
               <span class="wrestlerInfo" id="wrestlerInfo21">Weight:<br>Grade:</span>
-              <button class="wrestlerButton" id="Button21">Wrestler Info</button>
+              <button class="wrestlerButton" id="Button21">More Info</button>
             </div>
             <div class="wrestlerBox" id="wrestlerBox22">
               <div class="wrestlerPicture">
@@ -385,7 +390,7 @@ html,body{
               </div>
               <span class="wrestlerName" id="wrestlerName22">Wrestler Name:</span>
               <span class="wrestlerInfo" id="wrestlerInfo22">Weight:<br>Grade:</span>
-              <button class="wrestlerButton" id="Button22">Wrestler Info</button>
+              <button class="wrestlerButton" id="Button22">More Info</button>
             </div>
             <div class="wrestlerBox" id="wrestlerBox23">
               <div class="wrestlerPicture">
@@ -393,7 +398,7 @@ html,body{
               </div>
               <span class="wrestlerName" id="wrestlerName23">Wrestler Name:</span>
               <span class="wrestlerInfo" id="wrestlerInfo23">Weight:<br>Grade:</span>
-              <button class="wrestlerButton" id="Button23">Wrestler Info</button>
+              <button class="wrestlerButton" id="Button23">More Info</button>
             </div>
             <div class="wrestlerBox" id="wrestlerBox24">
               <div class="wrestlerPicture">
@@ -401,7 +406,7 @@ html,body{
               </div>
               <span class="wrestlerName" id="wrestlerName24">Wrestler Name:</span>
               <span class="wrestlerInfo" id="wrestlerInfo24">Weight:<br>Grade:</span>
-              <button class="wrestlerButton" id="Button24">Wrestler Info</button>
+              <button class="wrestlerButton" id="Button24">More Info</button>
             </div>
             <div class="wrestlerBox" id="wrestlerBox25">
               <div class="wrestlerPicture">
@@ -409,7 +414,7 @@ html,body{
               </div>
               <span class="wrestlerName" id="wrestlerName25">Wrestler Name:</span>
               <span class="wrestlerInfo" id="wrestlerInfo25">Weight:<br>Grade:</span>
-              <button class="wrestlerButton" id="Button25">Wrestler Info</button>
+              <button class="wrestlerButton" id="Button25">More Info</button>
             </div>
             <div class="wrestlerBox" id="wrestlerBox26">
               <div class="wrestlerPicture">
@@ -417,7 +422,7 @@ html,body{
               </div>
               <span class="wrestlerName" id="wrestlerName26">Wrestler Name:</span>
               <span class="wrestlerInfo" id="wrestlerInfo26">Weight:<br>Grade:</span>
-              <button class="wrestlerButton" id="Button26">Wrestler Info</button>
+              <button class="wrestlerButton" id="Button26">More Info</button>
             </div>
             <div class="wrestlerBox" id="wrestlerBox27">
               <div class="wrestlerPicture">
@@ -425,7 +430,7 @@ html,body{
               </div>
               <span class="wrestlerName" id="wrestlerName27">Wrestler Name:</span>
               <span class="wrestlerInfo" id="wrestlerInfo27">Weight:<br>Grade:</span>
-              <button class="wrestlerButton" id="Button27">Wrestler Info</button>
+              <button class="wrestlerButton" id="Button27">More Info</button>
             </div>
             <div class="wrestlerBox" id="wrestlerBox28">
               <div class="wrestlerPicture">
@@ -433,7 +438,7 @@ html,body{
               </div>
               <span class="wrestlerName" id="wrestlerName28">Wrestler Name:</span>
               <span class="wrestlerInfo" id="wrestlerInfo28">Weight:<br>Grade:</span>
-              <button class="wrestlerButton" id="Button28">Wrestler Info</button>
+              <button class="wrestlerButton" id="Button28">More Info</button>
             </div>
             <div class="wrestlerBox" id="wrestlerBox29">
               <div class="wrestlerPicture">
@@ -441,7 +446,7 @@ html,body{
               </div>
               <span class="wrestlerName" id="wrestlerName29">Wrestler Name:</span>
               <span class="wrestlerInfo" id="wrestlerInfo29">Weight:<br>Grade:</span>
-              <button class="wrestlerButton" id="Button29">Wrestler Info</button>
+              <button class="wrestlerButton" id="Button29">More Info</button>
             </div>
             <div class="wrestlerBox" id="wrestlerBox30">
               <div class="wrestlerPicture">
@@ -449,7 +454,7 @@ html,body{
               </div>
               <span class="wrestlerName" id="wrestlerName30">Wrestler Name:</span>
               <span class="wrestlerInfo" id="wrestlerInfo30">Weight:<br>Grade:</span>
-              <button class="wrestlerButton" id="Button30">Wrestler Info</button>
+              <button class="wrestlerButton" id="Button30">More Info</button>
             </div>
             <div class="wrestlerBox" id="wrestlerBox31">
               <div class="wrestlerPicture">
@@ -457,7 +462,7 @@ html,body{
               </div>
               <span class="wrestlerName" id="wrestlerName31">Wrestler Name:</span>
               <span class="wrestlerInfo" id="wrestlerInfo31">Weight:<br>Grade:</span>
-              <button class="wrestlerButton" id="Button31">Wrestler Info</button>
+              <button class="wrestlerButton" id="Button31">More Info</button>
             </div>
             <div class="wrestlerBox" id="wrestlerBox32">
               <div class="wrestlerPicture">
@@ -465,7 +470,7 @@ html,body{
               </div>
               <span class="wrestlerName" id="wrestlerName32">Wrestler Name:</span>
               <span class="wrestlerInfo" id="wrestlerInfo32">Weight:<br>Grade:</span>
-              <button class="wrestlerButton" id="Button32">Wrestler Info</button>
+              <button class="wrestlerButton" id="Button32">More Info</button>
             </div>
             <div class="wrestlerBox" id="wrestlerBox33">
               <div class="wrestlerPicture">
@@ -473,7 +478,7 @@ html,body{
               </div>
               <span class="wrestlerName" id="wrestlerName33">Wrestler Name:</span>
               <span class="wrestlerInfo" id="wrestlerInfo33">Weight:<br>Grade:</span>
-              <button class="wrestlerButton" id="Button33">Wrestler Info</button>
+              <button class="wrestlerButton" id="Button33">More Info</button>
             </div>
             <div class="wrestlerBox" id="wrestlerBox34">
               <div class="wrestlerPicture">
@@ -481,7 +486,7 @@ html,body{
               </div>
               <span class="wrestlerName" id="wrestlerName34">Wrestler Name:</span>
               <span class="wrestlerInfo" id="wrestlerInfo34">Weight:<br>Grade:</span>
-              <button class="wrestlerButton" id="Button34">Wrestler Info</button>
+              <button class="wrestlerButton" id="Button34">More Info</button>
             </div>
             <div class="wrestlerBox" id="wrestlerBox35">
               <div class="wrestlerPicture">
@@ -489,7 +494,7 @@ html,body{
               </div>
               <span class="wrestlerName" id="wrestlerName35">Wrestler Name:</span>
               <span class="wrestlerInfo" id="wrestlerInfo35">Weight:<br>Grade:</span>
-              <button class="wrestlerButton" id="Button35">Wrestler Info</button>
+              <button class="wrestlerButton" id="Button35">More Info</button>
             </div>
             <div class="wrestlerBox" id="wrestlerBox36">
               <div class="wrestlerPicture">
@@ -497,7 +502,7 @@ html,body{
               </div>
               <span class="wrestlerName" id="wrestlerName36">Wrestler Name:</span>
               <span class="wrestlerInfo" id="wrestlerInfo36">Weight:<br>Grade:</span>
-              <button class="wrestlerButton" id="Button36">Wrestler Info</button>
+              <button class="wrestlerButton" id="Button36">More Info</button>
             </div>
             <div class="wrestlerBox" id="wrestlerBox37">
               <div class="wrestlerPicture">
@@ -505,7 +510,7 @@ html,body{
               </div>
               <span class="wrestlerName" id="wrestlerName37">Wrestler Name:</span>
               <span class="wrestlerInfo" id="wrestlerInfo37">Weight:<br>Grade:</span>
-              <button class="wrestlerButton" id="Button37">Wrestler Info</button>
+              <button class="wrestlerButton" id="Button37">More Info</button>
             </div>
             <div class="wrestlerBox" id="wrestlerBox38">
               <div class="wrestlerPicture">
@@ -513,7 +518,7 @@ html,body{
               </div>
               <span class="wrestlerName" id="wrestlerName38">Wrestler Name:</span>
               <span class="wrestlerInfo" id="wrestlerInfo38">Weight:<br>Grade:</span>
-              <button class="wrestlerButton" id="Button38">Wrestler Info</button>
+              <button class="wrestlerButton" id="Button38">More Info</button>
             </div>
             <div class="wrestlerBox" id="wrestlerBox39">
               <div class="wrestlerPicture">
@@ -521,7 +526,7 @@ html,body{
               </div>
               <span class="wrestlerName" id="wrestlerName39">Wrestler Name:</span>
               <span class="wrestlerInfo" id="wrestlerInfo39">Weight:<br>Grade:</span>
-              <button class="wrestlerButton" id="Button39">Wrestler Info</button>
+              <button class="wrestlerButton" id="Button39">More Info</button>
             </div>
             <div class="wrestlerBox" id="wrestlerBox40">
               <div class="wrestlerPicture">
@@ -529,7 +534,7 @@ html,body{
               </div>
               <span class="wrestlerName" id="wrestlerName40">Wrestler Name:</span>
               <span class="wrestlerInfo" id="wrestlerInfo40">Weight:<br>Grade:</span>
-              <button class="wrestlerButton" id="Button40">Wrestler Info</button>
+              <button class="wrestlerButton" id="Button40">More Info</button>
             </div>
             <div class="wrestlerBox" id="wrestlerBox41">
               <div class="wrestlerPicture">
@@ -537,7 +542,7 @@ html,body{
               </div>
               <span class="wrestlerName" id="wrestlerName41">Wrestler Name:</span>
               <span class="wrestlerInfo" id="wrestlerInfo41">Weight:<br>Grade:</span>
-              <button class="wrestlerButton" id="Button41">Wrestler Info</button>
+              <button class="wrestlerButton" id="Button41">More Info</button>
             </div>
             <div class="wrestlerBox" id="wrestlerBox42">
               <div class="wrestlerPicture">
@@ -545,7 +550,7 @@ html,body{
               </div>
               <span class="wrestlerName" id="wrestlerName42">Wrestler Name:</span>
               <span class="wrestlerInfo" id="wrestlerInfo42">Weight:<br>Grade:</span>
-              <button class="wrestlerButton" id="Button42">Wrestler Info</button>
+              <button class="wrestlerButton" id="Button42">More Info</button>
             </div>
             <div class="wrestlerBox" id="wrestlerBox43">
               <div class="wrestlerPicture">
@@ -553,7 +558,7 @@ html,body{
               </div>
               <span class="wrestlerName" id="wrestlerName43">Wrestler Name:</span>
               <span class="wrestlerInfo" id="wrestlerInfo43">Weight:<br>Grade:</span>
-              <button class="wrestlerButton" id="Button43"> Wrestler Info</button>
+              <button class="wrestlerButton" id="Button43"> More Info</button>
             </div>
             <div class="wrestlerBox" id="wrestlerBox44">
               <div class="wrestlerPicture">
@@ -561,7 +566,7 @@ html,body{
               </div>
               <span class="wrestlerName" id="wrestlerName44">Wrestler Name:</span>
               <span class="wrestlerInfo" id="wrestlerInfo44">Weight:<br>Grade:</span>
-              <button class="wrestlerButton" id="Button44">Wrestler Info</button>
+              <button class="wrestlerButton" id="Button44">More Info</button>
             </div>
             <div class="wrestlerBox" id="wrestlerBox45">
               <div class="wrestlerPicture">
@@ -569,7 +574,7 @@ html,body{
               </div>
               <span class="wrestlerName" id="wrestlerName45">Wrestler Name:</span>
               <span class="wrestlerInfo" id="wrestlerInfo45">Weight:<br>Grade:</span>
-              <button class="wrestlerButton" id="Button45">Wrestler Info</button>
+              <button class="wrestlerButton" id="Button45">More Info</button>
             </div>
             <div class="wrestlerBox" id="wrestlerBox46">
               <div class="wrestlerPicture">
@@ -577,7 +582,7 @@ html,body{
               </div>
               <span class="wrestlerName" id="wrestlerName46">Wrestler Name:</span>
               <span class="wrestlerInfo" id="wrestlerInfo46">Weight:<br>Grade:</span>
-              <button class="wrestlerButton" id="Button46">Wrestler Info</button>
+              <button class="wrestlerButton" id="Button46">More Info</button>
             </div>
             <div class="wrestlerBox" id="wrestlerBox47">
               <div class="wrestlerPicture">
@@ -585,7 +590,7 @@ html,body{
               </div>
               <span class="wrestlerName" id="wrestlerName47">Wrestler Name:</span>
               <span class="wrestlerInfo" id="wrestlerInfo47">Weight:<br>Grade:</span>
-              <button class="wrestlerButton" id="Button47">Wrestler Info</button>
+              <button class="wrestlerButton" id="Button47">More Info</button>
             </div>
             <div class="wrestlerBox" id="wrestlerBox48">
               <div class="wrestlerPicture">
@@ -593,7 +598,7 @@ html,body{
               </div>
               <span class="wrestlerName" id="wrestlerName48">Wrestler Name:</span>
               <span class="wrestlerInfo" id="wrestlerInfo48">Weight:<br>Grade:</span>
-              <button class="wrestlerButton" id="Button48">Wrestler Info</button>
+              <button class="wrestlerButton" id="Button48">More Info</button>
             </div>
             <div class="wrestlerBox" id="wrestlerBox49">
               <div class="wrestlerPicture">
@@ -601,7 +606,7 @@ html,body{
               </div>
               <span class="wrestlerName" id="wrestlerName49">Wrestler Name:</span>
               <span class="wrestlerInfo" id="wrestlerInfo49">Weight:<br>Grade:</span>
-              <button class="wrestlerButton" id="Button49">Wrestler Info</button>
+              <button class="wrestlerButton" id="Button49">More Info</button>
             </div>
             <div class="wrestlerBox" id="wrestlerBox50">
               <div class="wrestlerPicture">
@@ -609,7 +614,7 @@ html,body{
               </div>
               <span class="wrestlerName" id="wrestlerName50">Wrestler Name:</span>
               <span class="wrestlerInfo" id="wrestlerInfo50">Weight:<br>Grade:</span>
-              <button class="wrestlerButton" id="Button50">Wrestler Info</button>
+              <button class="wrestlerButton" id="Button50">More Info</button>
             </div>
             <div class="wrestlerBox" id="wrestlerBox51">
               <div class="wrestlerPicture">
@@ -617,7 +622,7 @@ html,body{
               </div>
               <span class="wrestlerName" id="wrestlerName51">Wrestler Name:</span>
               <span class="wrestlerInfo" id="wrestlerInfo51">Weight:<br>Grade:</span>
-              <button class="wrestlerButton" id="Button51">Wrestler Info</button>
+              <button class="wrestlerButton" id="Button51">More Info</button>
             </div>
             <div class="wrestlerBox" id="wrestlerBox52">
               <div class="wrestlerPicture">
@@ -625,7 +630,7 @@ html,body{
               </div>
               <span class="wrestlerName" id="wrestlerName52">Wrestler Name:</span>
               <span class="wrestlerInfo" id="wrestlerInfo52">Weight:<br>Grade:</span>
-              <button class="wrestlerButton" id="Button52">Wrestler Info</button>
+              <button class="wrestlerButton" id="Button52">More Info</button>
             </div>
           </div>
       </main>

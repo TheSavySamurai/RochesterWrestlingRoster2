@@ -4,11 +4,13 @@
   font-family: 'Poppins'; /* Added a fallback font */
 }
 #falconNavImg{
-  width:15vw;
-  height:15vw;
+  width:20vh;
+  height:20vh;
   object-fit: scale-down;
   background:#1c028d;
   border-radius:50%;
+  position:absolute;
+  top:9vh;
   padding:5vh;
 }
 body{
@@ -27,7 +29,6 @@ body{
   background: #2900e0;
   color: #ffffff; /* Use hex code for white */
   text-align: center;
-  box-shadow:0vh 2vh 5vh #0e0146;
   margin-bottom:5vh;
 }
 #headArea{
@@ -51,14 +52,15 @@ body{
 .navBar a {
   display: inline-block; /* Ensures proper spacing */
   color: #ffffff;
+  z-index:999;
   text-decoration: none;
-  font-size: 1em;
+  font-size: 1.3em;
   text-wrap:nowrap;
   height:fit-content;
   align-self:center;
   background: #2900e0;
   border-radius: 10%;
-  padding:0.5em;
+  padding:1em;
   transition:transform 0.3s; /* Separate transitions for clarity */
 }
 
@@ -68,6 +70,12 @@ body{
 }
 main{
   justify-self:center;
+}
+@media screen and (max-width: 800px) {
+  .navBar a{
+    padding:0.5em;
+    font-size:1em;
+  }
 }
 
 

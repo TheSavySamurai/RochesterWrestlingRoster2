@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Rochester Wrestling Roster</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Poppins"
+      rel="stylesheet"
+    />
+    <style>
+      *{
+        box-sizing: border-box;
+      }
+      .title{
+        font-size:200%;
+        font-weight: bold;
+      }
+      .subtitle{
+        font-size:150%;
+        font-weight: bold;
+      }
+      .caption{
+        font-size:125%;
+        font-weight: bold;
+      }
+      section{
+        display:flex;
+        flex-direction: column;
+        align-items: center;
+      }
+      .informationArea{
+        display:flex;
+        flex-direction: row;
+        width:100vw;
+        height:fit-content;
+      }
+
+      ol{
+        text-align:left;
+      }
+      #wrestlerClipArt{
+        width:100vw;
+        height:fit-content;
+        object-fit: scale-down;
+      }
+      @media screen and (max-width: 800px) {
+        .informationArea{
+          flex-direction: column;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    
+    <div class="content">
+      <nav>
+        <div class="navBar" id="navBar">
+          <a href="home.html">Home</a>
+          <a href="fullRoster.html">Roster</a> 
+          <a href="rules.html">Rules</a>
+          <img id="falconNavImg"src="images/rochesterFalcon.png">
+          <a href="help.html">Help</a>
+          <a href="about.html">Site info</a>
+        </div>
+      </nav>
+      <div class="header">
+        <div id="headArea">
+          <h1>Rules of wrestling</h1>
+        </div>
+      </div>
+      <main>
+        <section>
+            <img id="wrestlerClipArt" src="images/wrestlersClipArt.png"alt="Wrestling Clip Art">
+            <div class="informationArea">
+                <ol>
+                    <li><b>Match Structure</b></li>
+                    <ul>
+                        <li><b>Objective:</b> The main objective is to pin the opponent's shoulders to the mat.</li>
+                        <li><b>Duration:</b> Matches are typically divided into periods, with the total match time varying by level and type of competition.</li>
+                    </ul>
+                    <li><b>Scoring</b></li>
+                    <ul>
+                        <li><b>Takedown:</b>Bringing the opponent to the mat from a standing position (worth 3 points).</li>
+                        <li><b>Escape:</b>Getting away from the opponent's control and returning to a standing position (worth 1 point).</li>
+                        <li><b>Reversal:</b>Reversing control from the bottom position to the top position (worth 2 points).</li>
+                        <li><b>Near Fall:</b>Holding the opponent's shoulders near the mat (worth 2, 3, or 4 points, depending on the duration).</li>
+                    </ul>
+                </ol>
+            </div>
+        <section>
+      </main>
+    </div>
+  </body>
+</html>
