@@ -43,8 +43,32 @@
       }
       #wrestlerClipArt{
         width:100vw;
-        height:fit-content;
+        height:30vh;
         object-fit: scale-down;
+      }
+      .weightList{
+        width:50vw;
+        border-radius:2vh;
+        height:fit-content;
+        background:#2900e0;
+        color:#fff;
+        padding-left:6vw;
+        padding-right:6vw;
+      }
+      hr{
+        width:100vw;
+        background:#000;
+        color:#000;
+        margin-top:5vh;
+        margin-bottom:5vh;
+      }
+      .ruleHeader{
+        background:#2900e0;
+        border-radius:3vh;
+        padding:1vh 2vw 1vh 2vh;
+        color:#fff;
+        width:fit-content;
+        text-align: center;
       }
       @media screen and (max-width: 800px) {
         .informationArea{
@@ -74,19 +98,78 @@
       <main>
         <section>
             <img id="wrestlerClipArt" src="images/wrestlersClipArt.png"alt="Wrestling Clip Art">
+              <h1>Weight Classes</h1>
+              <div class="weightList">
+              <ul>
+                <li>106 lbs</li>
+                <li>113 lbs</li>
+                <li>120 lbs</li>
+                <li>126 lbs</li>
+                <li>132 lbs</li>
+                <li>138 lbs</li>
+                <li>144 lbs</li>
+                <li>150 lbs</li>
+                <li>157 lbs</li>
+                <li>165 lbs</li>
+                <li>175 lbs</li>
+                <li>190 lbs</li>
+                <li>215 lbs</li>
+                <li>285 lbs</li>
+              </ul>
+              </div>
+              <hr>
+              <h1>Rules</h1>
             <div class="informationArea">
                 <ol>
-                    <li><b>Match Structure</b></li>
+                    <li class="ruleHeader"><b>Match Structure</b></li>
                     <ul>
                         <li><b>Objective:</b> The main objective is to pin the opponent's shoulders to the mat.</li>
                         <li><b>Duration:</b> Matches are typically divided into periods, with the total match time varying by level and type of competition.</li>
                     </ul>
-                    <li><b>Scoring</b></li>
+                    <li class="ruleHeader"><b>Scoring</b></li>
                     <ul>
                         <li><b>Takedown:</b>Bringing the opponent to the mat from a standing position (worth 3 points).</li>
                         <li><b>Escape:</b>Getting away from the opponent's control and returning to a standing position (worth 1 point).</li>
                         <li><b>Reversal:</b>Reversing control from the bottom position to the top position (worth 2 points).</li>
                         <li><b>Near Fall:</b>Holding the opponent's shoulders near the mat (worth 2, 3, or 4 points, depending on the duration).</li>
+                    </ul>
+                    <li class="ruleHeader"><b>Illegal Moves</b></li>
+                    <ul>
+                      <li>No striking, punching, or kicking.</li>
+                      <li>No choking or using pressure points.</li>
+                      <li>No pulling of hair, clothing, or headgear.</li>
+                      <li> No locking of joints in a way that could cause injury.</li>
+                    </ul>
+                    <li class="ruleHeader"><b>Conduct</b></li>
+                    <ul>
+                      <li>Wrestlers must display good sportsmanship at all times.</li>
+                      <li>Any unsportsmanlike conduct, such as taunting or excessive celebration, can result in penalties.</li>
+                    </ul>
+                    <li class="ruleHeader"><b>Out-of-Bounds</b></li>
+                    <ul>
+                      <li>Wrestlers are considered out-of-bounds when any part of their body is outside the designated wrestling area.</li>
+                      <li>The referee will stop the match and restart it from the center.</li>
+                    </ul>
+                    <li class="ruleHeader"><b>Winning the Match</b></li>
+                    <ul>
+                      <li><b>Pin:</b>The match ends immediately if a wrestler pins the opponent's shoulders to the mat.</li>
+                      <li><b>Technical Fall:</b>A wrestler wins if they gain a certain lead in points over the opponent (typically 15 points).</li>
+                      <li><b>Decision:</b>The wrestler with the most points at the end of the match wins.</li>
+                      <li><b>Default:</b> A wrestler wins if the opponent cannot continue due to injury or other reasons.</li>
+                      <li><b>Disquallification:</b>A wrestler wins if the opponent is disqualified for repeated violations.</li>
+                    </ul>
+                    <li class="ruleHeader"><b>Equipment and Attire</b></li>
+                    <ul>
+                      <li>Wrestlers must wear a singlet, wrestling shoes, and headgear.</li>
+                      <li> No jewelry or accessories are allowed.</li>
+                    </ul>
+                    <li class="ruleHeader"><b>Recent rule changes of 2024</b></li>
+                    <ul>
+                      <li><b>10 foot circle</b>The 10-foot circle in the center of the wrestling mat is now optional.</li>
+                      <li><b>Imbounds with One point of Contact:</b>Only one point of contact by either wrestler is required to be inbounds.</li>
+                      <li><b>Near-Fall Points</b>Redefined how near-fall points are awarded, with points now equating to the number of seconds in which near-fall criteria are met.</li>
+                      <li><b>Technical Fall:</b>Clarified that a technical fall concludes when near-fall criteria are no longer met.</li>
+                      <li><b>Referee Time-Out Signal:</b> Created a signal for a referee’s time-out when the referee needs to address a situation not covered by injury, blood, or recovery time.</li>
                     </ul>
                 </ol>
             </div>

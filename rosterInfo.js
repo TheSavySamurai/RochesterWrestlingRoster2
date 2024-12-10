@@ -157,18 +157,51 @@ document.addEventListener('DOMContentLoaded', function () {
     searchBtn.addEventListener("click", function() {
         console.log("search btn clicked");
         var searchValue = searchInput.value.toLowerCase();
-        var box1 = document.getElementById("wrestlerBox0");
-        var boxes;
         var filteredWrestlers = wrestlers.filter(function(wrestler) {
             return wrestler.name.toLowerCase().includes(searchValue);
         });
-            displayData(filteredWrestlers);
-            for(i = 1; i < wrestlers.length; i++){
-                boxes = document.getElementById("wrestlerBox" + i);
-                boxes.style.display = "none";
-            }
-         });
     
+        // Hide all wrestler boxes first
+        for (let i = 0; i < wrestlers.length; i++) {
+            var boxes = document.getElementById("wrestlerBox" + i);
+            if (boxes) {
+                boxes.style.display = "none"; // Hide all boxes
+            }
+        }
+    
+        // Display only the filtered wrestlers
+        for (let i = 0; i < filteredWrestlers.length; i++) {
+            var tempImageId = 'wrestlerPicture' + i; // ID for the image
+            var tempImageName = "images/" + filteredWrestlers[i].image;
+            var wrestlerNameId = 'wrestlerName' + i;
+            var wrestlerName = document.getElementById(wrestlerNameId);
+            
+            // Show the wrestler box for the filtered wrestlers
+            var wrestlerBoxId = 'wrestlerBox' + i;
+            var wrestlerBox = document.getElementById(wrestlerBoxId);
+            var wrestlerInfoId = 'wrestlerInfo' + i; // Assuming you have an info element
+            var wrestlerInfo = document.getElementById(wrestlerInfoId);
+            console.log(wrestlerInfo);
+            if (wrestlerBox) {
+                wrestlerBox.style.display = "block"; // Show the box
+                document.getElementById (tempImageId).src = tempImageName;
+                wrestlerName.innerHTML = filteredWrestlers[i].name;
+    
+                // Update wrestler info
+                
+                console.log(`Wrestler Info Element: ${wrestlerInfo}`); // Check if the element is found
+                console.log(`Updating info for: ${filteredWrestlers[i].name}`);
+                if (wrestlerInfo) {
+                    wrestlerInfo.innerHTML = `Year: ${filteredWrestlers[i].year || 'N/A'}<br>Weight: ${filteredWrestlers[i].weight || 'N/A'}`;
+                    console.log(wrestlerInfo.innerHtml);
+                } else {
+                    console.error(`Element with ID ${wrestlerInfoId} not found.`);
+                }
+                console.log(wrestlerInfo.innerHtml);
+                console.log(wrestlerInfo);
+            }
+        }
+    });
     var buttons = document.getElementsByClassName('wrestlerButton');
     var buttonArray = Array.from(buttons);
     buttonArray.forEach(function (button) {
